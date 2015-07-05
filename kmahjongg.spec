@@ -7,9 +7,8 @@ Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://games.kde.org/game.php?game=kmahjongg
 Source:		http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	libkmahjongg-devel
-BuildRequires:	kdelibs-devel
-BuildRequires:	libkdegames4-devel
+BuildRequires:	cmake(KF5KMahjongglib)
+BuildRequires:	cmake(ECM)
 Requires:	libkdegames-common
 Requires:	kmahjongglib
 
@@ -30,10 +29,10 @@ tiles off the game board by locating each tile's matching pair.
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde4
-%make
+%ninja -C build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build

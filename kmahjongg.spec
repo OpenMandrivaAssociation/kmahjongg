@@ -7,9 +7,9 @@ Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://games.kde.org/game.php?game=kmahjongg
 Source:		http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	libkmahjongg-devel
+BuildRequires:	cmake(KF5KMahjongglib)
+BuildRequires:	cmake(KF5KDEGames)
 BuildRequires:	kdelibs-devel
-BuildRequires:	libkdegames4-devel
 Requires:	libkdegames-common
 Requires:	kmahjongglib
 

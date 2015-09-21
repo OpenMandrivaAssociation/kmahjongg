@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kmahjongg-15.04.3.tar.xz: 6bb7ad0e2923f3a8e8d58676fadc80d6ae0ecfba
+sources:
+  kmahjongg-15.08.1.tar.xz: 46420b475bdfddba950e82c24bb66f43b263e6e2

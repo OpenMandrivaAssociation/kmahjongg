@@ -1,7 +1,7 @@
 Name:		kmahjongg
 Summary:	A tile laying patience
-Version:	15.04.3
-Release:	3
+Version:	15.08.1
+Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
@@ -32,7 +32,7 @@ tiles off the game board by locating each tile's matching pair.
 %setup -q
 
 %build
-%cmake_kde4
+%cmake_kde4 -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6
 %make
 
 %install

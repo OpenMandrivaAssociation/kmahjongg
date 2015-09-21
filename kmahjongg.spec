@@ -9,7 +9,7 @@ URL:		http://games.kde.org/game.php?game=kmahjongg
 Source:		http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(KDEGames)
 BuildRequires:	kdelibs-devel
-BuildRequires:	%{_lib}kmahjongg4-devel
+BuildRequires:	libkmahjongg4-devel
 Requires:	libkdegames-common
 Requires:	kmahjongglib
 

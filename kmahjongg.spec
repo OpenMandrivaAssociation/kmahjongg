@@ -1,6 +1,6 @@
 Name:		kmahjongg
 Summary:	A tile laying patience
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -36,13 +36,12 @@ In KMahjongg the tiles are scrambled and staked on top of each other to
 resemble a certain shape. The player is then expected to remove all the
 tiles off the game board by locating each tile's matching pair.
 
-%files
+%files -f kmahjongg.lang
 %{_bindir}/kmahjongg
 %{_datadir}/kmahjongg
 %{_datadir}/kxmlgui5/kmahjongg
 %{_datadir}/applications/org.kde.kmahjongg.desktop
 %{_datadir}/config.kcfg/kmahjongg.kcfg
-%doc %{_docdir}/HTML/en/kmahjongg
 %{_datadir}/icons/*/*/apps/kmahjongg.*
 
 
@@ -57,3 +56,4 @@ tiles off the game board by locating each tile's matching pair.
 
 %install
 %ninja_install -C build
+%find_lang kmahjongg --with-html

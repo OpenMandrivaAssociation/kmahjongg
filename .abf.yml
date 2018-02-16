@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kmahjongg-17.12.1.tar.xz: 9209049f6223231d2eae2ec9712c872a06802b15
+sources:
+  kmahjongg-17.12.2.tar.xz: 53321b2648aa013b0464abd989b783c8a7c097e0

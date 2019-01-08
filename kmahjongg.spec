@@ -1,6 +1,6 @@
 Name:		kmahjongg
 Summary:	A tile laying patience
-Version:	 18.12.0
+Version:	 18.12.1
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE

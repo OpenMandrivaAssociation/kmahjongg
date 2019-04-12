@@ -37,7 +37,7 @@ resemble a certain shape. The player is then expected to remove all the
 tiles off the game board by locating each tile's matching pair.
 
 %files -f kmahjongg.lang
-%{_sysconfdir}/xdg/kmajhongg.categories
+%{_sysconfdir}/xdg/kmahjongg.categories
 %{_bindir}/kmahjongg
 %{_datadir}/kmahjongg
 %{_datadir}/kxmlgui5/kmahjongg

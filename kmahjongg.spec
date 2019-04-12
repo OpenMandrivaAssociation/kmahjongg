@@ -1,7 +1,7 @@
 Name:		kmahjongg
 Summary:	A tile laying patience
-Version:	 18.12.3
-Release:	2
+Version:	 19.04.0
+Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
@@ -37,6 +37,7 @@ resemble a certain shape. The player is then expected to remove all the
 tiles off the game board by locating each tile's matching pair.
 
 %files -f kmahjongg.lang
+%{_sysconfdir}/xdg/kmajhongg.categories
 %{_bindir}/kmahjongg
 %{_datadir}/kmahjongg
 %{_datadir}/kxmlgui5/kmahjongg

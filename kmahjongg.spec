@@ -1,6 +1,6 @@
 Name:		kmahjongg
 Summary:	A tile laying patience
-Version:	20.12.3
+Version:	21.03.80
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -40,7 +40,6 @@ tiles off the game board by locating each tile's matching pair.
 %{_datadir}/qlogging-categories5/kmahjongg.categories
 %{_bindir}/kmahjongg
 %{_datadir}/kmahjongg
-%{_datadir}/kxmlgui5/kmahjongg
 %{_datadir}/applications/org.kde.kmahjongg.desktop
 %{_datadir}/config.kcfg/kmahjongg.kcfg
 %{_datadir}/icons/*/*/apps/kmahjongg.*

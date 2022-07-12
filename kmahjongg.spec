@@ -1,6 +1,6 @@
 Name:		kmahjongg
 Summary:	A tile laying patience
-Version:	22.04.2
+Version:	22.04.3
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE

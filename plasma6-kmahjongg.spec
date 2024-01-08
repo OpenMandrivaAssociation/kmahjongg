@@ -2,7 +2,6 @@ Name:		plasma6-kmahjongg
 Summary:	A tile laying patience
 Version:	24.01.85
 Release:	1
-Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://games.kde.org/game.php?game=kmahjongg
@@ -24,10 +23,10 @@ BuildRequires:	cmake(KF6NewStuff)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6)
 BuildRequires:	cmake(Qt6Core)
-BuildRequires:	cmake(KF6KMahjongglib)
+BuildRequires:	cmake(KMahjongglib6)
 BuildRequires:	cmake(Gettext)
 BuildRequires:	cmake(PythonInterp)
-BuildRequires:	cmake(KF6KDEGames)
+BuildRequires:	cmake(KDEGames6)
 BuildRequires:	cmake
 BuildRequires:	ninja
 
@@ -48,7 +47,7 @@ tiles off the game board by locating each tile's matching pair.
 #------------------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n kmahjongg-%{version}
 
 %build
 %cmake \

@@ -1,6 +1,6 @@
 Name:		plasma6-kmahjongg
 Summary:	A tile laying patience
-Version:	24.01.90
+Version:	24.01.95
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL

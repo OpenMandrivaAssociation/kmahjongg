@@ -1,12 +1,19 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		plasma6-kmahjongg
 Summary:	A tile laying patience
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://games.kde.org/game.php?game=kmahjongg
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/games/kmahjongg/-/archive/%{gitbranch}/kmahjongg-%{gitbranchd}.tar.bz2#/kmahjongg-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kmahjongg-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Widgets)
@@ -47,7 +54,7 @@ tiles off the game board by locating each tile's matching pair.
 #------------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kmahjongg-%{version}
+%autosetup -p1 -n kmahjongg-%{?git:%{gitbranchd}}%{!?git:%{version}}
 
 %build
 %cmake \

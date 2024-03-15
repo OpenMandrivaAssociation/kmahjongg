@@ -4,7 +4,7 @@
 Name:		plasma6-kmahjongg
 Summary:	A tile laying patience
 Version:	24.02.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://games.kde.org/game.php?game=kmahjongg

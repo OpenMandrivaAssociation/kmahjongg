@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		plasma6-kmahjongg
 Summary:	A tile laying patience
-Version:	24.05.2
+Version:	24.08.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
@@ -50,6 +50,7 @@ tiles off the game board by locating each tile's matching pair.
 %{_datadir}/config.kcfg/kmahjongg.kcfg
 %{_datadir}/icons/*/*/apps/kmahjongg.*
 %{_datadir}/metainfo/org.kde.kmahjongg.appdata.xml
+%{_datadir}/qlogging-categories6/kmahjongg.renamecategories
 
 #------------------------------------------------------------------------------
 

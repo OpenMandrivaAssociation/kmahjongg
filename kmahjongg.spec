@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		kmahjongg
 Summary:	A tile laying patience
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
@@ -37,12 +37,17 @@ BuildRequires:	cmake(KDEGames6)
 BuildRequires:	cmake
 BuildRequires:	ninja
 
+%rename plasma6-kmahjongg
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 In KMahjongg the tiles are scrambled and staked on top of each other to
 resemble a certain shape. The player is then expected to remove all the
 tiles off the game board by locating each tile's matching pair.
 
-%files -f kmahjongg.lang
+%files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kmahjongg.categories
 %{_bindir}/kmahjongg
 %{_datadir}/kmahjongg
@@ -51,18 +56,3 @@ tiles off the game board by locating each tile's matching pair.
 %{_datadir}/icons/*/*/apps/kmahjongg.*
 %{_datadir}/metainfo/org.kde.kmahjongg.appdata.xml
 %{_datadir}/qlogging-categories6/kmahjongg.renamecategories
-
-#------------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kmahjongg-%{?git:%{gitbranchd}}%{!?git:%{version}}
-
-%build
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja -G Ninja
-%ninja
-
-%install
-%ninja_install -C build
-%find_lang kmahjongg --with-html
